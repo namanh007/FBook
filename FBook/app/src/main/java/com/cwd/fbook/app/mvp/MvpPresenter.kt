@@ -14,7 +14,7 @@ import com.cwd.fbook.app.base.BaseView
  *
  **************************************************************************************************
  */
-open class Presenter<V : BaseView> : PresenterInt<V> {
+open class MvpPresenter<V : BaseView> : MvpPresenterInt<V> {
 
     protected var view: V? = null
 

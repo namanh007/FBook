@@ -1,11 +1,8 @@
 package com.huy.source
 
 import android.os.Bundle
-import android.support.annotation.LayoutRes
 import android.support.v4.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import com.cwd.fbook.app.base.BaseView
 
 /**
@@ -20,7 +17,7 @@ import com.cwd.fbook.app.base.BaseView
  *
  **************************************************************************************************
  */
-abstract class MvpFragment<in V : BaseView, P : PresenterInt<V>> : Fragment() {
+abstract class MvpFragment<in V : BaseView, P : MvpPresenterInt<V>> : Fragment() {
 
     /**--------------------------------------------------------------------------------------
      *   [MvpFragment] Initialize variable & method

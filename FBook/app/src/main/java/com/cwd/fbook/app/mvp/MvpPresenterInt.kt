@@ -14,7 +14,7 @@ import com.cwd.fbook.app.base.BaseView
  *
  **************************************************************************************************
  */
-interface PresenterInt<in V : BaseView> {
+interface MvpPresenterInt<in V : BaseView> {
 
     fun attach(view: V)
 

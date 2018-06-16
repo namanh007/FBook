@@ -1,7 +1,6 @@
 package com.huy.source
 
 import android.os.Bundle
-import android.support.annotation.LayoutRes
 import android.support.v7.app.AppCompatActivity
 import com.cwd.fbook.app.base.BaseView
 
@@ -17,7 +16,7 @@ import com.cwd.fbook.app.base.BaseView
  *
  **************************************************************************************************
  */
-abstract class MvpActivity<in V : BaseView, P : PresenterInt<V>> :
+abstract class MvpActivity<in V : BaseView, P : MvpPresenterInt<V>> :
         AppCompatActivity() {
 
     /**--------------------------------------------------------------------------------------
