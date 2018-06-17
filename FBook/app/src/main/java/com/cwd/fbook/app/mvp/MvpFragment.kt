@@ -3,7 +3,9 @@ package com.huy.source
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.View
+import com.cwd.fbook.app.base.BaseFragment
 import com.cwd.fbook.app.base.BaseView
+import com.cwd.fbook.app.mvp.MvpViewInt
 
 /**
  **************************************************************************************************
@@ -17,7 +19,7 @@ import com.cwd.fbook.app.base.BaseView
  *
  **************************************************************************************************
  */
-abstract class MvpFragment<in V : BaseView, P : MvpPresenterInt<V>> : Fragment() {
+abstract class MvpFragment<in V : BaseView, P : MvpPresenterInt<V>> : BaseFragment(), MvpViewInt {
 
     /**--------------------------------------------------------------------------------------
      *   [MvpFragment] Initialize variable & method
@@ -34,6 +36,7 @@ abstract class MvpFragment<in V : BaseView, P : MvpPresenterInt<V>> : Fragment()
         presenter = presenter()
         @Suppress("UNCHECKED_CAST")
         presenter?.attach(this as V)
+        onViewCreated()
     }
 
     override fun onDestroy() {

@@ -51,11 +51,11 @@ dependencies {
     // implementation 'com.jakewharton.rxbinding2:rxbinding:2.1.1'
 
     // Fast Android Networking
-    // implementation 'com.amitshekhar.android:android-networking:1.0.1'
+    implementation 'com.amitshekhar.android:android-networking:1.0.1'
 
     // Glide
-    // implementation "com.github.bumptech.glide:glide:$glide_version"
-    // annotationProcessor "com.github.bumptech.glide:compiler:$glide_version"
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glide_version"
 
     // Dimension
     implementation 'com.intuit.sdp:sdp-android:1.0.4'

@@ -2,7 +2,9 @@ package com.huy.source
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import com.cwd.fbook.app.base.BaseActivity
 import com.cwd.fbook.app.base.BaseView
+import com.cwd.fbook.app.mvp.MvpViewInt
 
 /**
  **************************************************************************************************
@@ -16,8 +18,7 @@ import com.cwd.fbook.app.base.BaseView
  *
  **************************************************************************************************
  */
-abstract class MvpActivity<in V : BaseView, P : MvpPresenterInt<V>> :
-        AppCompatActivity() {
+abstract class MvpActivity<in V : BaseView, P : MvpPresenterInt<V>> : BaseActivity(), MvpViewInt {
 
     /**--------------------------------------------------------------------------------------
      *   [MvpActivity] Initialize variable & method
@@ -34,6 +35,7 @@ abstract class MvpActivity<in V : BaseView, P : MvpPresenterInt<V>> :
         presenter = presenter()
         @Suppress("UNCHECKED_CAST")
         presenter?.attach(this as V)
+        onCreate()
     }
 
     override fun onDestroy() {

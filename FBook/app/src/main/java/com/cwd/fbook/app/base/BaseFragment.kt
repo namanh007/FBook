@@ -42,6 +42,9 @@ abstract class BaseFragment : Fragment(), BaseView {
     protected open fun onViewClick(v: View) {
     }
 
+    protected open fun onViewCreated() {
+    }
+
     open fun onBackPressed() {
         (activity as? BaseActivity)?.onBackClick()
     }

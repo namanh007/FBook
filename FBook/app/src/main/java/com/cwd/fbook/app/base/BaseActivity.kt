@@ -40,6 +40,8 @@ abstract class BaseActivity : AppCompatActivity(), BaseView {
     protected open fun onViewClick(v: View) {
     }
 
+    protected abstract fun onCreate()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(layout())

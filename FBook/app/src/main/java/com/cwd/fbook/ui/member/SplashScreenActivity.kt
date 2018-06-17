@@ -15,7 +15,3 @@ import com.cwd.fbook.app.base.BaseActivity
  *
  **************************************************************************************************
  */
-class SplashScreenActivity : BaseActivity() {
-
-    override fun layout() = R.layout.activity_splash_screen
-}

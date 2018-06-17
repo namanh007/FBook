@@ -33,4 +33,5 @@ class NotificationDialog(context: Context) : BaseDialog(context) {
     fun message(string: CharSequence?) {
         txvMessage.text = string!!
     }
+    
 }
