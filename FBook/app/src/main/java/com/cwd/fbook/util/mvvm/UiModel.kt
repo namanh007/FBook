@@ -1,4 +1,4 @@
-package com.cwd.fbook.ui.main
+package com.huy.source
 
 /**
  *  @Project: FBook
@@ -7,4 +7,6 @@ package com.cwd.fbook.ui.main
  *  @Description: ...
  *  All Right Reserved.
  */
+class UiModel {
 
+}

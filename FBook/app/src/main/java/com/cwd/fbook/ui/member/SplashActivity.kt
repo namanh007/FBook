@@ -1,4 +1,4 @@
-package com.cwd.fbook.ui.main
+package com.cwd.fbook.ui.member
 
 /**
  *  @Project: FBook
@@ -7,4 +7,3 @@ package com.cwd.fbook.ui.main
  *  @Description: ...
  *  All Right Reserved.
  */
-

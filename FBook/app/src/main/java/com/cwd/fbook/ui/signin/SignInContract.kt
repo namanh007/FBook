@@ -1,4 +1,4 @@
-package com.cwd.fbook.ui.signup
+package com.cwd.fbook.ui.signin
 
 import com.huy.source.MvpPresenterInt
 import com.huy.source.MvpViewInt
@@ -10,16 +10,15 @@ import com.huy.source.MvpViewInt
  *  @Description: ...
  *  All Right Reserved.
  */
-interface SignUpContract{
+interface SignInContract{
 
     interface View : MvpViewInt {
 
 
     }
 
-    interface Presenter : MvpPresenterInt<View> {
+    interface Presenter : MvpPresenterInt<View>{
 
-
-        fun signUp(email : String,pass : String)
+        fun login(email : String, pass : String)
     }
 }

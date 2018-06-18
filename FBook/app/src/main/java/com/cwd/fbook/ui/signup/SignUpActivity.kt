@@ -5,7 +5,11 @@ import com.cwd.fbook.R
 import com.huy.source.MvpActivity
 
 /**
- * Created by tykud on 17/06/2018.
+ *  @Project: FBook
+ *  @CreatedBy: CWD Tykudo 2018-06-15
+ *  @LastEditor: CWD Tykudo 2018-06-15
+ *  @Description: ...
+ *  All Right Reserved.
  */
 class SignUpActivity : MvpActivity<SignUpContract.View,SignUpContract.Presenter>(), SignUpContract.View{
 

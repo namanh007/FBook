@@ -6,8 +6,8 @@ import android.app.Application
  **************************************************************************************************
  * 
  *  @Project: FBook
- *  @CreatedBy: Huy AgilSun Quoc Vu 2018-06-14
- *  @LastEditor: Huy AgilSun Quoc Vu 2018-06-14
+ *  @CreatedBy: CWD Huy 2018-06-14
+ *  @LastEditor: CWD Huy 2018-06-14
  *  @Description: ...
  *
  *                                      All Right Reserved.

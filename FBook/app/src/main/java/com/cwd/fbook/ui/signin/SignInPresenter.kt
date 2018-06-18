@@ -1,4 +1,4 @@
-package com.cwd.fbook.ui.signup
+package com.cwd.fbook.ui.signin
 
 import com.huy.source.MvpPresenter
 
@@ -9,9 +9,10 @@ import com.huy.source.MvpPresenter
  *  @Description: ...
  *  All Right Reserved.
  */
-class SignUpPresenter : MvpPresenter<SignUpContract.View>(), SignUpContract.Presenter{
+class SignInPresenter : MvpPresenter<SignInContract.View>(), SignInContract.Presenter {
 
-    override fun signUp(email: String, pass: String) {
+    override fun login(email: String, pass: String) {
+
         view?.notify(
                 if(!email.isNullOrEmpty() || !pass.isNullOrEmpty())
                     "dang nhap thanh cong"
@@ -19,5 +20,6 @@ class SignUpPresenter : MvpPresenter<SignUpContract.View>(), SignUpContract.Pres
                     "dang nhap that bai"
         )
     }
+
 
 }

@@ -1,16 +1,11 @@
 package com.cwd.fbook.data.pref
 
 /**
- **************************************************************************************************
- * 
  *  @Project: FBook
- *  @CreatedBy: Huy AgilSun Quoc Vu 2018-06-15
- *  @LastEditor: Huy AgilSun Quoc Vu 2018-06-15
+ *  @CreatedBy: CWD Huy 2018-06-15
+ *  @LastEditor: CWD Huy 2018-06-15
  *  @Description: ...
- *
- *                                      All Right Reserved.
- *
- **************************************************************************************************
+ *  All Right Reserved.
  */
 class Account{
     var id : String = ""
