@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "88a36cc4-d4b6-4a6b-b97a-3df92dacd9b1",
+		"name": "FBook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sign In",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userid",
+							"value": "username1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/fbook/signin.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fbook",
+						"signin.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userid",
+							"value": "username10",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password10",
+							"type": "text"
+						},
+						{
+							"key": "firstname",
+							"value": "Vũ Quốc",
+							"type": "text"
+						},
+						{
+							"key": "lastname",
+							"value": "Huy",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "birth",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "VN",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Lạng Sơn",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/fbook/signup.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fbook",
+						"signup.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invite",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userid",
+							"value": "username1",
+							"type": "text"
+						},
+						{
+							"key": "inviteid",
+							"value": "username3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/fbook/invite.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fbook",
+						"invite.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
