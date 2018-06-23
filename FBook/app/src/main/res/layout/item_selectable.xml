@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemYear_textView"
+    style="@style/FillTheWidth"
+    android:fontFamily="@font/hind_siliguri_semi_bold"
+    android:gravity="center"
+    android:letterSpacing="0.1"
+    android:padding="@dimen/Dist3"
+    android:shadowColor="@color/LightTransparent"
+    android:shadowDx="1"
+    android:shadowDy="1"
+    android:shadowRadius="2"
+    android:text="1990"
+    android:textColor="@android:color/darker_gray"
+    android:textSize="@dimen/Text4" />

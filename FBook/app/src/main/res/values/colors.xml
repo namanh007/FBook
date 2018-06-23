@@ -5,13 +5,15 @@
     <color name="colorPrimaryDark">#1aa085</color>
     <color name="colorAccent">#CA5E5A</color>
 
-    <color name="BlackOverlay">#66000000</color>
+
     <color name="LightBackground">#FAFAFA</color>
     <color name="ButtonNormal">#EEEEEE</color>
+    <color name="DarkShadow">#7F000000</color>
+    <color name="BlackOverlay">#66000000</color>
 
-    <color name="LightTransparent">#4e9c9c9c</color>
     <color name="Transparent">#00000000</color>
     <color name="SemiTransparent">#6F9C9C9C</color>
+    <color name="LightTransparent">#4e9c9c9c</color>
 
     <color name="Light">#EFEFF4</color>
     <color name="LightSmoke">#cfefeff4</color>
@@ -31,7 +33,7 @@
     <color name="PeterRiver">#3498DB</color>
     <color name="BelizeHole">#2980B9</color>
     <color name="DarkBelizeHole">#186FA7</color>
-    <color name="Pinky">#E358F2</color>
+    <color name="Pink">#E358F2</color>
     <color name="Amethyst">#9B59B6</color>
     <color name="Wisteria">#8E44AD</color>
     <color name="ChickenEgg">#FFE57F</color>

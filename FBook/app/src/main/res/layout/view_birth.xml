@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/birth_view_content"
+    style="@style/InfoView"
+    android:paddingBottom="@dimen/Dist6"
+    android:paddingTop="@dimen/Dist6">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/birth_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:background="@drawable/drw_smoking_top" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/drw_smoking_bottom" />
+
+</RelativeLayout>

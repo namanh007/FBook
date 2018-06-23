@@ -19,7 +19,7 @@ class SignInActivity : MvpActivity<SignInContract.View, SignInContract.Presenter
     override fun presenter(): SignInContract.Presenter? = SignInPresenter()
 
     override fun onCreate() {
-        btn_login.setOnClickListener(onViewClick)
+        btn_login.setOnClickListener(click)
     }
 
     override fun onViewClick(v: View) {

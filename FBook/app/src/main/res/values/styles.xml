@@ -30,6 +30,46 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <!-- Design. -->
+    <style name="TextButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/Dist4</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minWidth">@dimen/_80sdp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/Text3</item>
+        <item name="android:shadowColor">@color/LightTransparent</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+    </style>
+
+    <style name="InfoView" parent="VerticalLayout">
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="SexRadio">
+        <item name="android:layout_width">@dimen/_120sdp</item>
+        <item name="android:layout_height">@dimen/RowItemSize</item>
+        <item name="android:textColor">@drawable/selector_text_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">@dimen/Text5</item>
+        <item name="android:layout_margin">@dimen/Dist2</item>
+        <item name="android:shadowColor">@color/LightTransparent</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+        <item name="android:fontFamily">@font/hind_siliguri_semi_bold</item>
+        <item name="android:letterSpacing">0.1</item>
+    </style>
+
+    <style name="AppBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/AppBarSize</item>
+    </style>
+
     <!-- Layout styles. -->
     <style name="MatchParent">
         <item name="android:layout_width">match_parent</item>
@@ -68,6 +108,15 @@
 
     <style name="ParentLayout" parent="MatchParent">
         <item name="android:background">@color/LightBackground</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+
+    <style name="VerticalLayout" parent="ParentLayout">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="VerticalView" parent="FillTheWidth">
+        <item name="android:orientation">vertical</item>
     </style>
 
     <style name="RowItem">
@@ -93,7 +142,7 @@
         <item name="android:paddingRight">@dimen/_4sdp</item>
         <item name="android:text">@string/app_name</item>
         <item name="android:textColor">@color/colorPrimaryDark</item>
-        <item name="android:textSize">@dimen/ExtraTextSize</item>
+        <item name="android:textSize">@dimen/Text4</item>
         <item name="android:textStyle">bold</item>
     </style>
 
@@ -106,27 +155,41 @@
 
     <style name="DialogButton">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/MediumPlusSize</item>
+        <item name="android:layout_height">@dimen/Size5</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:text">@string/close</item>
-        <item name="android:textSize">@dimen/LargeTextSize</item>
+        <item name="android:textSize">@dimen/Text3</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     <!--Text Styles-->
-    <style name="SmallText" parent="WrapContent">
-        <item name="android:textSize">@dimen/SmallTextSize</item>
+    <style name="LabelText" parent="WrapContent">
+        <item name="android:fontFamily">@font/hind_siliguri_medium</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:text">Text</item>
+        <item name="android:textSize">@dimen/Text3</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="Text" parent="WrapContent">
+        <item name="android:text">Text</item>
+    </style>
+
+    <style name="SmallText" parent="Text">
+        <item name="android:textSize">@dimen/Text2</item>
         <item name="android:text">Small Text</item>
     </style>
 
-    <style name="MediumText" parent="WrapContent">
-        <item name="android:textSize">@dimen/MediumTextSize</item>
+    <style name="MediumText" parent="Text">
+        <item name="android:textSize">@dimen/Text3</item>
         <item name="android:text">Medium Text</item>
     </style>
 
-    <style name="LargeText" parent="WrapContent">
-        <item name="android:textSize">@dimen/LargeTextSize</item>
+    <style name="LargeText" parent="Text">
+        <item name="android:textSize">@dimen/Text4</item>
         <item name="android:text">Large Text</item>
     </style>
 
@@ -142,18 +205,30 @@
         <item name="android:textColor">@android:color/white</item>
     </style>
 
+    <style name="SmallTextPrimary" parent="SmallText">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="MediumTextPrimary" parent="MediumText">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="LargeTextPrimary" parent="LargeText">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
     <style name="SmallDigit" parent="WrapContent">
-        <item name="android:textSize">@dimen/SmallTextSize</item>
+        <item name="android:textSize">@dimen/Text1</item>
         <item name="android:text">123</item>
     </style>
 
     <style name="MediumDigit" parent="WrapContent">
-        <item name="android:textSize">@dimen/MediumTextSize</item>
+        <item name="android:textSize">@dimen/Text2</item>
         <item name="android:text">123</item>
     </style>
 
     <style name="LargeDigit" parent="WrapContent">
-        <item name="android:textSize">@dimen/LargeTextSize</item>
+        <item name="android:textSize">@dimen/Text3</item>
         <item name="android:text">123</item>
     </style>
 

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/ParentLayout">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarView"
+        style="@style/AppBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.cwd.fbook.view.AppBarView
+            style="@style/MatchParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:appbarTitle="@string/register" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <com.cwd.fbook.view.SliderView
+        android:id="@+id/register_slideView"
+        style="@style/ScaleItem"
+        android:layout_marginTop="@dimen/Dist2"
+        app:layout_constraintBottom_toTopOf="@+id/register_view_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarView">
+
+        <include layout="@layout/view_name" />
+
+        <include layout="@layout/view_sex" />
+
+        <include layout="@layout/view_birth" />
+
+        <include layout="@layout/view_location" />
+
+        <include layout="@layout/view_password" />
+
+        <include layout="@layout/view_term" />
+
+    </com.cwd.fbook.view.SliderView>
+
+
+    <TextView
+        android:id="@+id/register_view_back"
+        style="@style/TextButton"
+        android:layout_marginBottom="@dimen/Dist2"
+        android:text="@string/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/register_view_next"
+        style="@style/TextButton"
+        android:text="@string/next"
+        app:layout_constraintBottom_toBottomOf="@+id/register_view_back"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/register_tabLayout"
+        android:layout_width="@dimen/_86sdp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/register_view_back"
+        app:layout_constraintEnd_toStartOf="@+id/register_view_next"
+        app:layout_constraintStart_toEndOf="@+id/register_view_back"
+        app:layout_constraintTop_toTopOf="@+id/register_view_back"
+        app:tabBackground="@drawable/selector_dot_tab"
+        app:tabGravity="center"
+        app:tabIndicatorHeight="0dp" />
+
+</android.support.constraint.ConstraintLayout>

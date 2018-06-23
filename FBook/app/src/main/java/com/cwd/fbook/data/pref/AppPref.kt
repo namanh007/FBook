@@ -2,12 +2,11 @@ package com.cwd.fbook.data.pref
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.cwd.fbook.MyApp
+import com.cwd.fbook.App
 
 /**
  *  @Project: FBook
  *  @CreatedBy: CWD Huy 2018-06-15
- *  @LastEditor: CWD Huy 2018-06-15
  *  @Description: ...
  *  All Right Reserved.
  */
@@ -17,7 +16,7 @@ class AppPref private constructor() {
     private var editor: SharedPreferences.Editor? = null
 
     private fun init() {
-        shared = MyApp.instance.getSharedPreferences(SHARED, Context.MODE_PRIVATE)!!
+        shared = App.instance.getSharedPreferences(SHARED, Context.MODE_PRIVATE)!!
     }
 
     val accountId: String
