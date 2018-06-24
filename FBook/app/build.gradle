@@ -66,4 +66,7 @@ dependencies {
     androidTestImplementation "com.android.support.test.espresso:espresso-core:3.0.2"
     testImplementation "android.arch.core:core-testing:$lifecycle_version"
     testImplementation 'junit:junit:4.12'
+
+    //Circle ImageView
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
 }
