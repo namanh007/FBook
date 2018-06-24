@@ -1,5 +1,78 @@
 <resources>
     <string name="app_name">FBook</string>
 
+    <!--A-->
+    <!--B-->
+    <string name="back">BACK</string>
+    <!--C-->
+    <string name="city_province">City/Province</string>
     <string name="close">Close</string>
+    <string name="_continue">CONTINUE</string>
+    <string name="country">Country</string>
+    <!--D-->
+    <!--E-->
+    <!--F-->
+    <string name="last_name">Last name</string>
+    <string name="female">Female</string>
+    <string name="first_name">First name</string>
+    <!--G-->
+    <string name="gay">Gay</string>
+    <!--H-->
+    <!--I-->
+    <string name="i_agree_policy">I agree to the FBook application and Services Agreement</string>
+    <!--J-->
+    <!--K-->
+    <!--L-->
+    <string name="lesbian">Lesbian</string>
+    <!--M-->
+    <string name="male">Male</string>
+    <!--N-->
+    <string name="name_invalid">  *  must be 1 - 24 chars</string>
+    <string name="next">NEXT</string>
+    <!--O-->
+    <!--P-->
+    <string name="password">Password</string>
+    <string name="password_invalid">  *  must be 6 - 24 chars</string>
+    <string name="previous">PREVIOUS</string>
+    <!--Q-->
+    <!--R-->
+    <string name="retype_password">Retype password</string>
+    <string name="retype_password_invalid">retype password incorrect</string>
+    <!--S-->
+    <!--T-->
+    <string name="term_and_condition">Term and Conditions</string>
+    <string name="term_has_not_agree">You must be agree with our terms and conditions before continue create an new account !</string>
+    <!--U-->
+    <string name="unisex">Unisex</string>
+    <!--type-->
+    <!--W-->
+    <!--X-->
+    <!--Y-->
+    <!--Z-->
+
+    <string name="congratulation">Congratulation to join with us!
+        Now you update the photo display,
+        connect and interactive with friends that same sex hobby,
+        and experience the fun that we bring to you.
+    </string>
+
+    <string name="term_and_condition_content">
+FBook is an society application with employs the message, group, chat method.
+By downloading and registering the app, the user is agreeing to their Terms and Conditions.
+These Terms will be applied fully and affect to your use of this Website. By using this app, you agreed to accept all terms and conditions written in here.
+You must not use this app if you disagree with any of these app standard Terms and Conditions. Minors or people below 18 years old are not allowed to use this app.
+\nYou are specifically restricted from all of the following:
+\n. Publishing any Website material in any other media.
+\n. Selling, sub licensing and/or otherwise commercializing any Website material.
+\n. Publicly performing and/or showing any Website material.
+\n. Using this Website in any way that is or may be damaging to this Website.
+\n. Using this Website in any way that impacts user access to this Website.
+\n. Using this Website contrary to applicable laws and regulations, or in any way may cause harm to the Website, or to any person or business entity.
+\n. Engaging in any data mining, data harvesting, data extracting or any other similar activity in relation to this Website.
+\n. Using this Website to engage in any advertising or marketing.
+Certain areas of this Website are restricted from being access by you and CWD 1410
+may further restrict access by you to any areas of this Website, at any time, in absolute discretion.Any user ID and password you may have forthis app are confidential and you must maintain confidentiality as well.
+    </string>
+    <string name="register">Register</string>
+
 </resources>

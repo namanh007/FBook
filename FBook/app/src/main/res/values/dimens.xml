@@ -1,29 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <dimen name="TinySize">@dimen/_20sdp</dimen>
-    <dimen name="SmallSize">@dimen/_30sdp</dimen>
-    <dimen name="SmallPlusSize">@dimen/_32sdp</dimen>
-    <dimen name="MediumSize">@dimen/_40sdp</dimen>
-    <dimen name="MediumPlusSize">@dimen/_44sdp</dimen>
-    <dimen name="LargeSize">@dimen/_50sdp</dimen>
-    <dimen name="LargePlusSize">@dimen/_54sdp</dimen>
-    <dimen name="ExtraSize">@dimen/_60sdp</dimen>
-    <dimen name="MediumX2Size">@dimen/_80sdp</dimen>
-    <dimen name="TinyDistance">@dimen/_8sdp</dimen>
-    <dimen name="SmallDistance">@dimen/_10sdp</dimen>
-    <dimen name="MediumDistance">@dimen/_16sdp</dimen>
-    <dimen name="FarDistance">@dimen/_32sdp</dimen>
+    <dimen name="Size1">@dimen/_20sdp</dimen>
+    <dimen name="Size2">@dimen/_30sdp</dimen>
+    <dimen name="Size3">@dimen/_32sdp</dimen>
+    <dimen name="Size4">@dimen/_40sdp</dimen>
+    <dimen name="Size5">@dimen/_44sdp</dimen>
+    <dimen name="Size6">@dimen/_50sdp</dimen>
+    <dimen name="Size7">@dimen/_54sdp</dimen>
+    <dimen name="Size8">@dimen/_60sdp</dimen>
+    <dimen name="Size9">@dimen/_80sdp</dimen>
 
-    <dimen name="sizeIcon100">@dimen/_100sdp</dimen>
 
-    <dimen name="AppBarSize">@dimen/_46sdp</dimen>
-    <dimen name="RowItemSize">@dimen/_40sdp</dimen>
-    <dimen name="BannerHeightSize">@dimen/_50sdp</dimen>
-    <dimen name="sizeBannerWidth">@dimen/_180sdp</dimen>
+    <dimen name="Dist1">@dimen/_4sdp</dimen>
+    <dimen name="Dist2">@dimen/_8sdp</dimen>
+    <dimen name="Dist3">@dimen/_12sdp</dimen>
+    <dimen name="Dist4">@dimen/_16sdp</dimen>
+    <dimen name="Dist5">@dimen/_20sdp</dimen>
+    <dimen name="Dist6">@dimen/_28sdp</dimen>
 
-    <dimen name="SmallTextSize">@dimen/_10ssp</dimen>
-    <dimen name="MediumTextSize">@dimen/_12ssp</dimen>
-    <dimen name="LargeTextSize">@dimen/_16ssp</dimen>
-    <dimen name="ExtraTextSize">@dimen/_20ssp</dimen>
+    <dimen name="Text1">@dimen/_8ssp</dimen>
+    <dimen name="Text2">@dimen/_10ssp</dimen>
+    <dimen name="Text3">@dimen/_12ssp</dimen>
+    <dimen name="Text4">@dimen/_14ssp</dimen>
+    <dimen name="Text5">@dimen/_16ssp</dimen>
+    <dimen name="Text6">@dimen/_18ssp</dimen>
+    <dimen name="Text7">@dimen/_20ssp</dimen>
+    <dimen name="Text8">@dimen/_24ssp</dimen>
+
+    //?android:attr/actionBarSize
+    <dimen name="AppBarSize">@dimen/_44sdp</dimen>
+    <dimen name="RowItemSize">@dimen/_38sdp</dimen>
 </resources>

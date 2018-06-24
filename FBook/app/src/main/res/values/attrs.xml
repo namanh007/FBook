@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="AppBarView">
+        <attr name="appbarTitle" format="string" />
+        <attr name="appbarLeftIcon" format="reference" />
+        <attr name="appbarRightIcon" format="reference" />
+        <attr name="appbarBackgroundColor" format="reference" />
+        <attr name="appbarTitleColor" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="InputView">
+        <attr name="inputLabel" format="string" />
+        <attr name="inputLabelColor" format="integer" />
+        <attr name="android:text" format="string" />
+        <attr name="android:hint" format="string" />
+        <attr name="android:maxLength" format="integer" />
+        <attr name="android:inputType" format="integer" />
+        <attr name="android:maxLines" format="integer" />
+        <attr name="android:textColor" format="integer" />
+        <attr name="android:editable" format="boolean" />
+    </declare-styleable>
+    
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/term_view_content"
+    style="@style/InfoView">
+
+    <ScrollView style="@style/MatchParent">
+
+        <LinearLayout
+            style="@style/VerticalLayout"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/Dist3">
+
+            <TextView
+                style="@style/LargeTextPrimary"
+                android:text="@string/term_and_condition"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/MediumText"
+                android:layout_marginTop="@dimen/Dist3"
+                android:text="@string/term_and_condition_content" />
+
+            <CheckBox
+                android:id="@+id/term_checkBox_agree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/Dist3"
+                android:text="@string/i_agree_policy" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</FrameLayout>

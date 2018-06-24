@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sex_radioGroup_content"
+    style="@style/InfoView"
+    android:checkedButton="@id/sex_radioButton_unisex"
+    android:gravity="center">
+
+    <RadioButton
+        android:id="@+id/sex_radioButton_unisex"
+        style="@style/SexRadio"
+        android:text="@string/unisex" />
+
+    <RadioButton
+        android:id="@+id/sex_radioButton_female"
+        style="@style/SexRadio"
+        android:text="@string/female" />
+
+    <RadioButton
+        android:id="@+id/sex_radioButton_male"
+        style="@style/SexRadio"
+        android:text="@string/male" />
+
+    <RadioButton
+        android:id="@+id/sex_radioButton_lesbian"
+        style="@style/SexRadio"
+        android:text="@string/lesbian" />
+
+    <RadioButton
+        android:id="@+id/sex_radioButton_gay"
+        style="@style/SexRadio"
+        android:text="@string/gay" />
+
+
+</RadioGroup>

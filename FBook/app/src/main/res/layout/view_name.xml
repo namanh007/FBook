@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/InfoView"
+    android:padding="@dimen/Dist4"
+    android:id="@+id/name_view_content">
+
+    <com.cwd.fbook.view.InputView
+        android:id="@+id/name_inputView_firstName"
+        style="@style/FillTheWidth"
+        app:inputLabel="@string/first_name"/>
+
+    <com.cwd.fbook.view.InputView
+        android:id="@+id/name_inputView_lastName"
+        android:layout_marginTop="@dimen/Dist6"
+        style="@style/FillTheWidth"
+        app:inputLabel="@string/last_name"/>
+
+
+</LinearLayout>
