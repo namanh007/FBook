@@ -1,0 +1,287 @@
+{
+	"info": {
+		"_postman_id": "88a36cc4-d4b6-4a6b-b97a-3df92dacd9b1",
+		"name": "FBook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sign In Account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "username1",
+							"type": "text",
+							"description": "username to authenticate user account, unique and must be 6 to 24 characters, ascii–latin-general (a-z, A-Z, 0-1) no space char and specify char."
+						},
+						{
+							"key": "password",
+							"value": "password1",
+							"type": "text",
+							"description": "password to authenticate user account, must be 6 to 24 characters, utf8"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/fbook/signin.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fbook",
+						"signin.php"
+					]
+				},
+				"description": "SUCCESS\t\t\r\n200 : user profile\t\t\r\nFAILED\t\t\t\r\n999 : failed\t\t\r\nERROR\t\t\r\n101 : required parameters is missing\t\t\r\n102 : required parameters is invalid"
+			},
+			"response": []
+		},
+		{
+			"name": "Sign Up New Account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "username0",
+							"type": "text",
+							"description": "username to authenticate user account, unique and must be 6 to 24 characters, ascii–latin-general (a-z, A-Z, 0-1) no space char and specify char"
+						},
+						{
+							"key": "password",
+							"value": "password0",
+							"type": "text",
+							"description": "password to authenticate user account and must be 6 to 24 characters, utf8"
+						},
+						{
+							"key": "first_name",
+							"value": "Nguyễn Đặng Thành",
+							"type": "text",
+							"description": "firstname parameter must be 1 to 24 characters, utf8 and none specify char"
+						},
+						{
+							"key": "last_name",
+							"value": "Chí Thôn",
+							"type": "text",
+							"description": "lastname parameter must be 1 to 24 characters, utf8 and none specify char"
+						},
+						{
+							"key": "sex",
+							"value": "1",
+							"type": "text",
+							"description": "sex parameter must be interger value in 0 to 4 - 0.FEMALE, 1:MALE, 2:LESBIAN, 3:GAY, 4:UNISEX"
+						},
+						{
+							"key": "birth",
+							"value": "1996",
+							"type": "text",
+							"description": "birth parameter must be interger value in (current year - 55) to (current year - 5)\n"
+						},
+						{
+							"key": "country",
+							"value": "VN",
+							"type": "text",
+							"description": "country parameter must be upper char 2alpha2code as VN, EN, US, JP…"
+						},
+						{
+							"key": "city",
+							"value": "Hồ Chí Minh",
+							"type": "text",
+							"description": "nullable"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/fbook/signup.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fbook",
+						"signup.php"
+					]
+				},
+				"description": "SUCCESS\t\t\r\n200 : user profile\t\t\r\nFAILED\t\t\t\r\n999 : failed\t\t\r\n801 : username has been used\t\t\r\nERROR\t\t\r\n101 : required parameters is missing\t\t\r\n102 : required parameters is invalid\t\t\r\n802 : username param is invalid\t\t\r\n803 : password param is invalid\t\t\r\n804 : firstname param is invalid\t\t\r\n805 : lastname param is invalid\t\t\r\n806 : sex param is invalid\t\t\t\r\n807 : birth param is invalid\t\t\r\n808 : country param is invalid"
+			},
+			"response": []
+		},
+		{
+			"name": "Friend Invite",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "username1",
+							"type": "text"
+						},
+						{
+							"key": "invite_id",
+							"value": "username1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/fbook/invite.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fbook",
+						"invite.php"
+					]
+				},
+				"description": "SUCCESS\t\t\r\n200 : success\t\t\r\nFAILED\t\t\t\r\n999 : failed\t\t\r\nERROR\t\t\r\n101 : required parameters is missing\t\t\r\n102 : required parameters is invalid\t\t\r\n601 : user not exist"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Photo Display By Url",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "username1",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "image_path",
+							"value": "photo/username101529831108865.png",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/fbook/update_photo.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fbook",
+						"update_photo.php"
+					]
+				},
+				"description": "SUCCESS\t\t\r\n200 : image path\t\t\r\nFAILED\t\t\t\r\n601 : image upload failed\t\t\r\nERROR\t\t\r\n101 : required parameters is missing\t\t\r\n102 : required parameters is invalid"
+			},
+			"response": []
+		},
+		{
+			"name": "Upload New Photo Display",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "username1",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "photo_display",
+							"description": "",
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/fbook/upload_photo.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fbook",
+						"upload_photo.php"
+					]
+				},
+				"description": "SUCCESS\t\t\r\n200 : image path\t\t\r\nFAILED\t\t\t\r\n601 : image upload failed\t\t\r\nERROR\t\t\r\n101 : required parameters is missing\t\t\r\n102 : required parameters is invalid"
+			},
+			"response": []
+		},
+		{
+			"name": "Search User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "search_key",
+							"value": "phú",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "from_result",
+							"value": "0",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "US",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "NewYork",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/fbook/search.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fbook",
+						"search.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
