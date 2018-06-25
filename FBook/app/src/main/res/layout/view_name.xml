@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     style="@style/InfoView"
-    android:padding="@dimen/Dist4"
+    android:paddingStart="@dimen/Dist6"
+    android:paddingEnd="@dimen/Dist6"
     android:id="@+id/name_view_content">
 
     <com.cwd.fbook.view.InputView

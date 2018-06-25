@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FBook</string>
+    <string name="app_name">FuckTale</string>
 
     <!--A-->
     <!--B-->
@@ -77,5 +77,6 @@ may further restrict access by you to any areas of this Website, at any time, in
     <string name="login">Login</string>
     <string name="username">Username</string>
     <string name="create_new_account">Create new account !?</string>
+    <string name="let_s_made_love">Let\'s made love together</string>
 
 </resources>

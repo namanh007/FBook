@@ -122,7 +122,7 @@ abstract class BaseAdapter<M, in H : BaseViewHolder>
     }
 
     fun clear() {
-        if(dataList != null && dataList.isNotEmpty())
+        if(dataList.isNotEmpty())
             dataList.clear()
     }
 

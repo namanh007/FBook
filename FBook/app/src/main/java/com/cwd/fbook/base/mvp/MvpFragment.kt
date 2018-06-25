@@ -35,5 +35,5 @@ abstract class MvpFragment<in V : BaseView, P : MvpPresenterInt<V>> : BaseFragme
         presenter?.detach()
     }
 
-    override fun string(stringRes: Int) = getString(stringRes)!!
+    override fun string(stringRes: Int) = getString(stringRes)
 }

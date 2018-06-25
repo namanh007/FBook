@@ -42,6 +42,8 @@
         <item name="android:shadowColor">@color/LightTransparent</item>
         <item name="android:shadowDx">1</item>
         <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+        <item name="android:textAllCaps">true</item>
     </style>
 
     <style name="InfoView" parent="VerticalLayout">
@@ -164,7 +166,7 @@
     </style>
 
     <!--Text Styles-->
-    <style name="LabelText" parent="WrapContent">
+    <style name="LabelText" parent="Text">
         <item name="android:fontFamily">@font/hind_siliguri_medium</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:text">Text</item>
@@ -172,6 +174,12 @@
         <item name="android:textAllCaps">true</item>
         <item name="android:letterSpacing">0.1</item>
         <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="LightLabelText" parent="LabelText">
+        <item name="android:fontFamily">@font/hind_siliguri_light</item>
+        <item name="android:letterSpacing">0.12</item>
     </style>
 
     <style name="Text" parent="WrapContent">

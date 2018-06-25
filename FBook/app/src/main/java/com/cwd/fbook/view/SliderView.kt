@@ -31,15 +31,15 @@ class SliderView : ViewFlipper {
     private lateinit var backExitAnimation: Animation
     var viewChangeListener: ViewChangedListener? = null
 
-    constructor(@NonNull context: Context) : super(context) {
+    constructor(context: Context) : super(context) {
         initView(context, null)
     }
 
-    constructor(@NonNull context: Context, @AttrRes attrs: AttributeSet?) : super(context, attrs) {
+    constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {
         initView(context, attrs)
     }
 
-    private fun initView(@NonNull context: Context, @AttrRes attrs: AttributeSet?) {
+    private fun initView(@NonNull context: Context, attrs: AttributeSet?) {
         nextPerformAnimation = AnimationUtils.loadAnimation(context, R.anim.enter_from_right)
         nextExitAnimation = AnimationUtils.loadAnimation(context, R.anim.exit_to_left)
         backPerformAnimation = AnimationUtils.loadAnimation(context, R.anim.enter_from_left)

@@ -1,4 +1,4 @@
-package com.cwd.fbook.ui.signin.model
+package com.cwd.fbook.ui.login.model
 
 /**
  * Created by tykud on 21/06/2018.

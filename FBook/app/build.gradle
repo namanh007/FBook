@@ -47,13 +47,13 @@ dependencies {
      annotationProcessor "android.arch.persistence.room:compiler:$room_version"
 
     // Lifecycle
-    // implementation "android.arch.lifecycle:extensions:$lifecycle_version"
-    // implementation "android.arch.lifecycle:reactivestreams:$lifecycle_version"
-    // annotationProcessor "android.arch.lifecycle:compiler:$lifecycle_version"
+    implementation "android.arch.lifecycle:extensions:$lifecycle_version"
+    implementation "android.arch.lifecycle:reactivestreams:$lifecycle_version"
+    annotationProcessor "android.arch.lifecycle:compiler:$lifecycle_version"
 
     // Rx
-    // implementation "io.reactivex.rxjava2:rxkotlin:$rx_kotlin_version"
-    // implementation 'com.jakewharton.rxbinding2:rxbinding:2.1.1'
+    implementation "io.reactivex.rxjava2:rxkotlin:$rx_kotlin_version"
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.1.1'
 
     // Fast Android Networking
     implementation 'com.amitshekhar.android:android-networking:1.0.1'

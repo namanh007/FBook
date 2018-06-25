@@ -13,6 +13,7 @@
             style="@style/MatchParent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:appbarLeftIcon="@drawable/ic_back_white"
             app:appbarTitle="@string/register" />
 
     </android.support.design.widget.AppBarLayout>
@@ -21,7 +22,7 @@
     <com.cwd.fbook.view.SliderView
         android:id="@+id/register_slideView"
         style="@style/ScaleItem"
-        android:layout_marginTop="@dimen/Dist2"
+        android:layout_marginTop="@dimen/Dist6"
         app:layout_constraintBottom_toTopOf="@+id/register_view_back"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

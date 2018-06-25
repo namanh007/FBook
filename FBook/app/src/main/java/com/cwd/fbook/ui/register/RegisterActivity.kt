@@ -28,7 +28,7 @@ class RegisterActivity : MvpActivity<RegisterContract.View, RegisterContract.Pre
 
     override fun layout() = R.layout.activity_register
 
-    override fun presenter(): RegisterContract.Presenter? = RegisterPresenter()
+    override fun presenter() = RegisterPresenter()
 
     override fun onCreate() {
         register_tabLayout.setUpWithSlideView(register_slideView)

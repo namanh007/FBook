@@ -1,4 +1,4 @@
-package com.cwd.fbook.ui.signin
+package com.cwd.fbook.ui.login
 
 import android.view.View
 import com.cwd.fbook.R
@@ -14,11 +14,11 @@ import kotlinx.android.synthetic.main.activity_login.*
  *  @Description: ...
  *  All Right Reserved.
  */
-class LogInActivity : MvpActivity<LoginContract.View, LoginContract.Presenter>(), LoginContract.View {
+class LogInActivity : MvpActivity<LogInContract.View, LogInContract.Presenter>(), LogInContract.View {
 
     override fun layout() = R.layout.activity_login
 
-    override fun presenter(): LoginContract.Presenter? = LoginPresenter()
+    override fun presenter(): LogInContract.Presenter? = LogInPresenter()
 
     override fun onCreate() {
         addOnClick(login_view_login,login_view_register)

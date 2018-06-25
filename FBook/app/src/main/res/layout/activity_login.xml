@@ -1,30 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    style="@style/VerticalLayout"
+    android:gravity="center_horizontal">
 
-    <com.cwd.fbook.view.InputView
-        android:id="@+id/login_inputView_userName"
-        style="@style/FillTheWidth"
-        app:inputLabel="@string/username"/>
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarView"
+        style="@style/AppBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <com.cwd.fbook.view.InputView
-        android:id="@+id/login_inputView_password"
+        <com.cwd.fbook.view.AppBarView
+            style="@style/MatchParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:appbarTitle="@string/login" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/name_view_content"
+        style="@style/InfoView"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/Dist6"
-        style="@style/FillTheWidth"
-        app:inputLabel="@string/password"/>
+        android:paddingStart="@dimen/Dist6"
+        android:paddingEnd="@dimen/Dist6">
+
+        <com.cwd.fbook.view.InputView
+            android:id="@+id/login_inputView_userName"
+            style="@style/FillTheWidth"
+            app:inputLabel="@string/username" />
+
+        <com.cwd.fbook.view.InputView
+            android:id="@+id/login_inputView_password"
+            style="@style/FillTheWidth"
+            android:layout_marginTop="@dimen/Dist6"
+            app:inputLabel="@string/password" />
+    </LinearLayout>
+
 
     <TextView
         android:id="@+id/login_view_login"
-       style="@style/TextButton"
+        style="@style/TextButton"
         android:layout_marginTop="@dimen/Dist6"
-        android:text="@string/login"/>
+        android:text="@string/login" />
 
     <TextView
         android:id="@+id/login_view_register"
         style="@style/MediumText"
         android:layout_marginTop="@dimen/Dist6"
-        android:text="@string/create_new_account"/>
+        android:text="@string/create_new_account" />
 
 </LinearLayout>

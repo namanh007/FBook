@@ -20,5 +20,9 @@
         <attr name="android:textColor" format="integer" />
         <attr name="android:editable" format="boolean" />
     </declare-styleable>
-    
+
+    <declare-styleable name="CustomTextView">
+        <attr name="gradientColorStart" format="integer" />
+        <attr name="gradientColorEnd" format="integer" />
+    </declare-styleable>
 </resources>
