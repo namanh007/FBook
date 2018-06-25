@@ -3,6 +3,7 @@ package com.cwd.fbook.util
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.collections.HashMap
 
 /**
  *  @Project: FBook
@@ -50,4 +51,12 @@ fun String?.isPersonName(): Boolean {
 
 fun String?.isPassword(): Boolean {
     return this!!.length in 6..24
+}
+
+fun HashMap<String, Any>.stringOf(key: String) : String{
+    return get(key).toString()
+}
+
+fun HashMap<String, Any>.intOf(key: String) : Int{
+    return get(key).toString().toInt()
 }

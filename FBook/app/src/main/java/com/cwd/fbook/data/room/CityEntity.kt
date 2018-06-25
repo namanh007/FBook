@@ -1,4 +1,4 @@
-package com.cwd.fbook.data.local
+package com.cwd.fbook.data.room
 
 import android.arch.persistence.room.PrimaryKey
 import android.arch.persistence.room.ColumnInfo
@@ -15,24 +15,18 @@ import io.reactivex.Single
  *  @Description: ...
  *  All Right Reserved.
  */
-@Dao
-interface CountryDao{
-
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun save(country: CountryEntity)
-
-    @Query("SELECT * FROM country")
-    fun get(): Single<CountryEntity>
-}
-
-@Entity(tableName = "country")
-data class CountryEntity constructor(
+@Entity(tableName = "province")
+data class CityEntity constructor(
 
         @PrimaryKey
-        @ColumnInfo(name = "country_id")
+        @ColumnInfo(name = "province_id")
         val id: String,
 
-        @ColumnInfo(name = "country_name")
-        val name: String
+        @ColumnInfo(name = "province_name")
+        val name: String,
+
+        @ColumnInfo(name = "province_country")
+        val country: String
+
 )
 

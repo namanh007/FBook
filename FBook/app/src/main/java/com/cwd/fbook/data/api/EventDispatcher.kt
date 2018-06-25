@@ -1,4 +1,4 @@
-package com.devfun.libs.events
+package com.cwd.fbook.data.api
 
 import android.util.SparseArray
 

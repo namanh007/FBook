@@ -1,4 +1,4 @@
-package com.cwd.fbook.data.local
+package com.cwd.fbook.data.room
 
 import android.arch.persistence.room.Database
 import android.arch.persistence.room.RoomDatabase
@@ -12,7 +12,7 @@ import android.arch.persistence.room.RoomDatabase
 @Database(
         entities = [
             CountryEntity::class,
-            ProvinceEntity::class,
+            CityEntity::class,
             UserEntity::class
         ],
         version = 1,
@@ -22,6 +22,6 @@ import android.arch.persistence.room.RoomDatabase
 abstract class AppDatabase : RoomDatabase() {
 
     abstract val countryDao: CountryEntity
-    abstract val provinceDao: ProvinceEntity
+    abstract val provinceDao: CityEntity
     abstract val userDao: UserEntity
 }

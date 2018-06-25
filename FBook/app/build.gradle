@@ -36,6 +36,11 @@ dependencies {
     implementation "com.android.support:customtabs:$sdk_version"
     implementation "com.android.support.constraint:constraint-layout:1.1.2"
 
+    // Network
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava:$retrofit_version"
+
     // Room Persistence
      implementation "android.arch.persistence.room:runtime:$room_version"
      implementation "android.arch.persistence.room:rxjava2:$room_version"
