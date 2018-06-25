@@ -16,7 +16,7 @@ interface LoginContract{
 
     interface Presenter : MvpPresenterInt<View>{
 
-        fun login(user : UserModel)
+        fun login(username : String?, password : String?)
         fun checkLogin()
         fun postData(user: UserModel)
     }

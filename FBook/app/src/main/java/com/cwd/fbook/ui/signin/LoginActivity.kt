@@ -1,32 +1,38 @@
-package com.cwd.fbook.ui.login
+package com.cwd.fbook.ui.signin
 
 import android.view.View
-import com.androidnetworking.AndroidNetworking
 import com.cwd.fbook.R
-import com.cwd.fbook.ui.signin.LoginContract
-import com.cwd.fbook.ui.signin.LoginPresenter
+import com.cwd.fbook.ui.register.RegisterActivity
+import com.cwd.fbook.util.navigate
 import com.huy.source.MvpActivity
 import kotlinx.android.synthetic.main.activity_login.*
-import okhttp3.Interceptor
-import okhttp3.OkHttpClient
 
 /**
- * Created by tykud on 17/06/2018.
+ *  @Project: FBook
+ *  @CreatedBy: CWD Tykudo 2018-06-15
+ *  @LastEditor: CWD Tykudo 2018-06-15
+ *  @Description: ...
+ *  All Right Reserved.
  */
-class LoginActivity : MvpActivity<LoginContract.View, LoginContract.Presenter>(), LoginContract.View {
+class LogInActivity : MvpActivity<LoginContract.View, LoginContract.Presenter>(), LoginContract.View {
 
     override fun layout() = R.layout.activity_login
 
     override fun presenter(): LoginContract.Presenter? = LoginPresenter()
 
     override fun onCreate() {
-        btn_login.setOnClickListener(onViewClick)
-        AndroidNetworking.initialize(getApplicationContext());
-
+        addOnClick(login_view_login,login_view_register)
     }
 
     override fun onViewClick(v: View) {
-       //presenter?.login(edt_user_id.text.toString(),edt_pass.text.toString())
+        when(v){
+            login_view_login -> {
+                presenter?.login(login_inputView_userName.text,login_inputView_password.text)
+            }
+            login_view_register -> {
+                navigate(RegisterActivity::class.java)
+            }
+        }
     }
 
 

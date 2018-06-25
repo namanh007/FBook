@@ -68,7 +68,7 @@ class InputView : LinearLayout {
 
     var text: String?
         get() = inputView_editText.text.toString()
-        set(value) {
+            set(value) {
             inputView_editText.setText(value)
         }
 
