@@ -74,5 +74,8 @@ Certain areas of this Website are restricted from being access by you and CWD 14
 may further restrict access by you to any areas of this Website, at any time, in absolute discretion.Any user ID and password you may have forthis app are confidential and you must maintain confidentiality as well.
     </string>
     <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="create_new_account">Create new account !?</string>
 
 </resources>

@@ -18,7 +18,7 @@
         android:theme="@style/AppTheme.NoActionBar">
 
         <!--UI-->
-        <activity android:name=".ui.signin.SignInActivity">
+        <activity android:name=".ui.signin.LogInActivity">
 
         </activity>
         <activity android:name=".ui.register.RegisterActivity"

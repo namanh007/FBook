@@ -49,4 +49,8 @@
     <color name="FireBrick">#C11B21</color>
     <color name="DarkFireBrick">#8B1A1A</color>
 
+    <color name="Black">#000000</color>
+    <color name="While">#ffffff</color>
+    <color name="Green">#052e2b</color>
+
 </resources>

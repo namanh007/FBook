@@ -3,6 +3,7 @@ package com.cwd.fbook.ui.register
 import com.cwd.fbook.R
 import com.cwd.fbook.ui.adapter.YearAdapter
 import com.cwd.fbook.ui.model.Sex
+import com.cwd.fbook.util.isPassword
 import com.cwd.fbook.util.isPersonName
 import com.huy.source.MvpPresenter
 import java.io.File
@@ -20,7 +21,9 @@ class RegisterPresenter : MvpPresenter<RegisterContract.View>(),
     private var lastName: String? = null
     private var password: String? = null
     private var birth = 1950
-    private var sex = 0
+    private var country : String? = null
+    private var city : String? = null
+    private var sex = 4
 
     override var yearAdt: YearAdapter? = null
 
@@ -65,7 +68,11 @@ class RegisterPresenter : MvpPresenter<RegisterContract.View>(),
 
     override fun validatePassword(password: String?, retypePassword: String?) {
 
+        if(password.isPassword() && retypePassword == password){
 
+        }else{
+
+        }
     }
 
     override fun validateImageFile(file: File?) {
