@@ -240,4 +240,13 @@
         <item name="android:text">123</item>
     </style>
 
+    //style YearPickerDialog
+    <style name="YearPickerDialog" parent="@android:style/Theme.Holo.Light.Dialog.NoActionBar.MinWidth">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    //style toolbar
+    <style name="toolbar_style" parent="WrapContent">
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
 </resources>
