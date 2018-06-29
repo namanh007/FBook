@@ -8,6 +8,12 @@
         <attr name="appbarBackgroundColor" format="reference" />
         <attr name="appbarTitleColor" format="reference" />
     </declare-styleable>
+    <declare-styleable name="ToolBarView">
+        <attr name="toolbarLeftIcon" format="reference" />
+        <attr name="toolbarRightIcon" format="reference" />
+        <attr name="toolbarBackgroundColor" format="reference" />
+        <attr name="toolbarTitleColor" format="reference" />
+    </declare-styleable>
 
     <declare-styleable name="InputView">
         <attr name="inputLabel" format="string" />
