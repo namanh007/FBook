@@ -1,4 +1,4 @@
-package com.huy.source
+package com.cwd.fbook.base
 
 import android.app.Activity
 import android.content.Intent
@@ -10,6 +10,8 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Toast
 import com.cwd.fbook.util.hideKeyboard
+import com.huy.source.NotificationDialog
+import com.huy.source.ProcessDialog
 
 /**
  *  @Project: FBook

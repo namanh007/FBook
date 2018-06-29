@@ -1,6 +1,7 @@
 package com.huy.source
 
 import android.os.Bundle
+import com.cwd.fbook.base.BaseActivity
 
 /**
  *  @Project: FBook
