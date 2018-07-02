@@ -30,7 +30,6 @@ class MainActivity : AppCompatActivity() {
 
     var toolbar : Toolbar ?= null
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_homepage)
@@ -39,6 +38,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         toolbar?.setNavigationIcon(drawable)
     }
+
     override fun onCreateOptionsMenu(menu: Menu) : Boolean{
         val menuInflater = getMenuInflater()
         menuInflater.inflate(R.menu.menu_main,menu)
