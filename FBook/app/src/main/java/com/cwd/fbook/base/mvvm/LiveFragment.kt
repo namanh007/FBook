@@ -3,6 +3,7 @@ package com.huy.source
 import android.os.Bundle
 import android.support.annotation.LayoutRes
 import android.view.View
+import com.cwd.fbook.base.BaseFragment
 
 /**
  *  @Project: FBook
@@ -12,10 +13,5 @@ import android.view.View
  */
 abstract class LiveFragment : BaseFragment(){
 
-    @LayoutRes
-    protected abstract fun layout(): Int
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-    }
 }

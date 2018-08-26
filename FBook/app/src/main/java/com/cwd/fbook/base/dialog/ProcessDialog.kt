@@ -2,6 +2,7 @@ package com.huy.source
 
 import android.content.Context
 import com.cwd.fbook.R
+import com.cwd.fbook.base.BaseDialog
 
 /**
  *  @Project: FBook

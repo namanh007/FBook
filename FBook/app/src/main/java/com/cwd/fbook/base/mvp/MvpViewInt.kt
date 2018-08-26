@@ -1,6 +1,7 @@
 package com.huy.source
 
 import android.support.annotation.StringRes
+import com.cwd.fbook.base.BaseView
 
 /**
  *  @Project: FBook
@@ -8,7 +9,7 @@ import android.support.annotation.StringRes
  *  @Description: ...
  *  All Right Reserved.
  */
-interface MvpViewInt : BaseView{
+interface MvpViewInt : BaseView {
 
     fun string(@StringRes stringRes: Int) : String
 }

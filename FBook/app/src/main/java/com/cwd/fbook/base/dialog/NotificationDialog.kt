@@ -4,6 +4,7 @@ import android.content.Context
 import android.support.annotation.StringRes
 import android.widget.TextView
 import com.cwd.fbook.R
+import com.cwd.fbook.base.BaseDialog
 
 /**
  *  @Project: FBook

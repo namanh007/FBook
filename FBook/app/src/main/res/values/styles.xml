@@ -143,8 +143,8 @@
         <item name="android:paddingLeft">@dimen/_4sdp</item>
         <item name="android:paddingRight">@dimen/_4sdp</item>
         <item name="android:text">@string/app_name</item>
-        <item name="android:textColor">@color/colorPrimaryDark</item>
-        <item name="android:textSize">@dimen/Text4</item>
+        <item name="android:textColor">@color/colorPrimaryLight</item>
+        <item name="android:textSize">@dimen/Text6</item>
         <item name="android:textStyle">bold</item>
     </style>
 
@@ -155,14 +155,8 @@
         <item name="android:orientation">horizontal</item>
     </style>
 
-    <style name="DialogButton">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/Size5</item>
-        <item name="android:gravity">center</item>
-        <item name="android:textColor">@color/colorPrimary</item>
+    <style name="DialogButton" parent="TextButton">
         <item name="android:text">@string/close</item>
-        <item name="android:textSize">@dimen/Text3</item>
-        <item name="android:textStyle">bold</item>
     </style>
 
     <!--Text Styles-->

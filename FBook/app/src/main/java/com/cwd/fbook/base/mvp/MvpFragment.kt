@@ -2,6 +2,8 @@ package com.huy.source
 
 import android.os.Bundle
 import android.view.View
+import com.cwd.fbook.base.BaseFragment
+import com.cwd.fbook.base.BaseView
 
 /**
  *  @Project: FBook

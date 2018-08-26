@@ -20,6 +20,7 @@ import android.support.v7.app.AppCompatActivity
 import android.util.Base64
 import android.util.DisplayMetrics
 import android.util.Log
+import android.view.View
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
@@ -77,29 +78,29 @@ fun Activity.hideKeyboard() {
     inputMethodManager.hideSoftInputFromWindow(currentFocus.windowToken, 0)
 }
 
-fun AppCompatActivity.launchFragment(@NonNull fragment: Fragment, frameId: Int, stackPopup: Boolean) {
+fun AppCompatActivity.launchFragment(@NonNull fragment: Fragment, container: View, stackPopup: Boolean) {
 
     if(stackPopup) {
 
         val tag = fragment::class.java.simpleName
-        supportFragmentManager.transaction { add(frameId, fragment, tag) }
+        supportFragmentManager.transaction { add(container.id, fragment, tag) }
         supportFragmentManager.transaction { addToBackStack(tag) }
     } else
-        supportFragmentManager.transaction { add(frameId, fragment) }
+        supportFragmentManager.transaction { add(container.id, fragment) }
 
 }
 
-fun AppCompatActivity.replaceFragment(@NonNull fragment: Fragment, frameId: Int) {
-    supportFragmentManager.transaction { replace(frameId, fragment) }
+fun AppCompatActivity.replaceFragment(@NonNull fragment: Fragment, container: View) {
+    supportFragmentManager.transaction { replace(container.id, fragment) }
 }
 
-fun AppCompatActivity.replaceFragment(fragment: Fragment, @IdRes layoutRes: Int, stackAdding: Boolean) {
+fun AppCompatActivity.replaceFragment(fragment: Fragment, @IdRes container: View, stackAdding: Boolean) {
     val tag = fragment.javaClass.simpleName
     val f = supportFragmentManager.findFragmentByTag(tag)
     if(f != null)
         supportFragmentManager.popBackStackImmediate(tag, FragmentManager.POP_BACK_STACK_INCLUSIVE)
     val trans = supportFragmentManager.beginTransaction()
-    trans.replace(layoutRes, fragment, fragment.javaClass.simpleName)
+    trans.replace(container.id, fragment, fragment.javaClass.simpleName)
     if(stackAdding)
         trans.addToBackStack(fragment.javaClass.simpleName)
     trans.commit()
@@ -237,26 +238,20 @@ fun Fragment.hideKeyboard() {
     activity?.hideKeyboard()
 }
 
-internal fun FragmentManager.remove(tag: String,
-                                    @AnimRes slideIn: Int = R.anim.enter_from_left,
-                                    @AnimRes slideOut: Int = R.anim.exit_to_right) {
+internal fun FragmentManager.remove(tag: String) {
     this.beginTransaction()
             .disallowAddToBackStack()
-            .setCustomAnimations(slideIn, slideOut)
+            .setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right)
             .remove(this.findFragmentByTag(tag))
             .commitNow()
 }
 
-internal fun FragmentManager.add(containerRes: Int,
-                                 fragment: Fragment,
-                                 tag: String,
-                                 @AnimRes slideIn: Int = R.anim.enter_from_right,
-                                 @AnimRes slideOut: Int = R.anim.exit_to_left) {
+internal fun FragmentManager.add(container: View, fragment: Fragment, tag: String) {
 
     this.beginTransaction()
             .disallowAddToBackStack()
-            .setCustomAnimations(slideIn, slideOut)
-            .add(containerRes, fragment, tag)
+            .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+            .add(container.id, fragment, tag)
             .commit()
 }
 

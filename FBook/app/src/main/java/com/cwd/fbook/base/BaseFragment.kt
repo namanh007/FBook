@@ -1,4 +1,4 @@
-package com.huy.source
+package com.cwd.fbook.base
 
 import android.app.Activity
 import android.content.Intent
@@ -31,7 +31,7 @@ abstract class BaseFragment : Fragment(), BaseView {
         lastClickTime = SystemClock.elapsedRealtime()
     }
 
-    abstract fun getLayoutId(): Int
+    abstract fun layout(): Int
 
     protected open fun onViewClick(v: View) {
     }
@@ -51,7 +51,7 @@ abstract class BaseFragment : Fragment(), BaseView {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(getLayoutId(), container, false)
+        return inflater.inflate(layout(), container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
