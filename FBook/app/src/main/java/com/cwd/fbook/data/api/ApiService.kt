@@ -4,6 +4,7 @@ import com.cwd.fbook.data.Key
 import com.google.gson.JsonObject
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
+import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -15,10 +16,14 @@ import retrofit2.http.*
  */
 interface ApiService {
 
-
-    @FormUrlEncoded
+    /*@FormUrlEncoded
     @POST("signin.php")
-    fun login(jsonObject : JsonObject): Call<JsonObject>
+    fun login(
+            @Field("username") username : String,
+            @Field("password") password: String): Call<ResponseBody>*/
+    //@FormUrlEncoded
+    @POST("signin.php")
+    fun login(@Body jsonObject : JsonObject): Call<JsonObject>
 
 
     @FormUrlEncoded

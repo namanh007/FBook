@@ -54,8 +54,8 @@ class RegisterPresenter : MvpPresenter<RegisterContract.View>(),
         if(valid) view?.swipeNextView()
     }
 
-    override fun attachSex(sex: Sex) {
-        this.sex = sex.id
+    override fun attachSex(sex: Int) {
+        this.sex = sex
         if(yearAdt == null)
             yearAdt = YearAdapter()
         view?.swipeNextView()

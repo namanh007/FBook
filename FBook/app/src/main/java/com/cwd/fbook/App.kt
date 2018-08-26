@@ -1,6 +1,7 @@
 package com.cwd.fbook
 
 import android.app.Application
+import com.cwd.fbook.data.define.User
 
 /**
  *  @Project: FBook

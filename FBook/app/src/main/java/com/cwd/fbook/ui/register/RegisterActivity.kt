@@ -3,6 +3,7 @@ package com.cwd.fbook.ui.register
 import android.support.v7.widget.LinearSnapHelper
 import android.view.View
 import com.cwd.fbook.R
+import com.cwd.fbook.R.id.register_tabLayout
 import com.cwd.fbook.data.define.Sex
 import com.huy.source.MvpActivity
 
@@ -20,67 +21,67 @@ class RegisterActivity : MvpActivity<RegisterContract.View, RegisterContract.Pre
     override fun presenter() = RegisterPresenter()
 
     override fun onCreate() {
-        register_tabLayout.setUpWithSlideView(register_slideView)
-        addOnClick(register_view_back, register_view_next)
-        LinearSnapHelper().attachToRecyclerView(birth_recyclerView)
+//        register_tabLayout.setUpWithSlideView(register_slideView)
+//        addOnClick(register_view_back, register_view_next)
+//        LinearSnapHelper().attachToRecyclerView(birth_recyclerView)
     }
 
     override fun onViewClick(v: View) {
         when(v) {
-            register_view_back -> onBackStep()
-            register_view_next -> onNextStep()
+//            register_view_back -> onBackStep()
+//            register_view_next -> onNextStep()
         }
     }
 
     override fun swipeNextView() {
-        register_slideView.showNext()
-        register_tabLayout.getTabAt(register_slideView.indexOfChild(currentFocus))?.select()
+//        register_slideView.showNext()
+//        register_tabLayout.getTabAt(register_slideView.indexOfChild(currentFocus))?.select()
     }
 
     override fun showFirstNameHint(stringRes: Int) {
-        name_inputView_firstName.error = if(stringRes == 0) null else getString(stringRes)
+//        name_inputView_firstName.error = if(stringRes == 0) null else getString(stringRes)
     }
 
     override fun showLastNameHint(stringRes: Int) {
-        name_inputView_lastName.error = if(stringRes == 0) null else getString(stringRes)
+//        name_inputView_lastName.error = if(stringRes == 0) null else getString(stringRes)
     }
 
     override fun showPasswordHint(stringRes: Int) {
-        password_inputView_password.error = if(stringRes == 0) null else getString(stringRes)
+//        password_inputView_password.error = if(stringRes == 0) null else getString(stringRes)
     }
 
     override fun showRetypePasswordHint(stringRes: Int) {
-        password_inputView_retypePassword.error = if(stringRes == 0) null else getString(stringRes)
+//        password_inputView_retypePassword.error = if(stringRes == 0) null else getString(stringRes)
     }
 
     // PRIVATE FUNCTION
     private fun onBackStep() {
-        if(register_slideView.currentView == name_view_content)
-            super.onBackPressed()
-        else
-            register_slideView.showPrevious()
+//        if(register_slideView.currentView == name_view_content)
+//            super.onBackPressed()
+//        else
+//            register_slideView.showPrevious()
     }
 
     private fun onNextStep() {
-        when(register_slideView.currentView) {
-            name_view_content -> onValidateUserName()
-            sex_radioGroup_content -> onAttachSex()
-            birth_view_content -> onAttachBirth()
-            password_view_content -> onValidatePassword()
-            term_view_content -> onRegisterRequest()
-            congratulation_view_content -> register_slideView.showPrevious()
-        }
+//        when(register_slideView.currentView) {
+//            name_view_content -> onValidateUserName()
+//            sex_radioGroup_content -> onAttachSex()
+//            birth_view_content -> onAttachBirth()
+//            password_view_content -> onValidatePassword()
+//            term_view_content -> onRegisterRequest()
+//            congratulation_view_content -> register_slideView.showPrevious()
+  //      }
     }
 
     private fun onValidateUserName() {
-        presenter?.validateUserName(
-                name_inputView_firstName.text,
-                name_inputView_lastName.text
-        )
+//        presenter?.validateUserName(
+//                name_inputView_firstName.text,
+//                name_inputView_lastName.text
+ //       )
     }
 
     private fun onAttachSex() {
-        presenter?.attachSex(
+      /*  presenter?.attachSex(
                 when(sex_radioGroup_content.checkedButton()) {
                     sex_radioButton_female -> Sex.FEMALE
                     sex_radioButton_male -> Sex.MALE
@@ -89,24 +90,24 @@ class RegisterActivity : MvpActivity<RegisterContract.View, RegisterContract.Pre
                     else -> Sex.UNISEX
                 }
         )
-        birth_recyclerView.setLinearAdapter(presenter?.yearAdt)
+        birth_recyclerView.setLinearAdapter(presenter?.yearAdt)*/
     }
 
     private fun onAttachBirth() {
-        presenter?.attachBirth()
+      /*  presenter?.attachBirth()*/
     }
 
     private fun onValidatePassword() {
-        presenter?.validatePassword(
+       /* presenter?.validatePassword(
                 password_inputView_password.text,
                 password_inputView_retypePassword.text
-        )
+        )*/
     }
 
     private fun onRegisterRequest() {
-        if(term_checkBox_agree.isChecked)
+      /*  if(term_checkBox_agree.isChecked)
             presenter?.register()
         else
-            notify(R.string.term_has_not_agree)
+            notify(R.string.term_has_not_agree)*/
     }
 }

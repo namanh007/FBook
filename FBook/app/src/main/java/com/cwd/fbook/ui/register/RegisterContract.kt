@@ -35,7 +35,7 @@ interface RegisterContract {
 
         fun validateUserName(firstName: String?, lastName: String?)
 
-        fun attachSex(sex: Sex)
+        fun attachSex(sex: Int)
 
         fun attachBirth()
 

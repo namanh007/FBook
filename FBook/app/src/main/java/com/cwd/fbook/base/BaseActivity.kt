@@ -10,15 +10,15 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Toast
 import com.cwd.fbook.util.hideKeyboard
-<<<<<<< HEAD:FBook/app/src/main/java/com/cwd/fbook/base/base/BaseActivity.kt
-import javax.xml.datatype.DatatypeConstants.SECONDS
+
+
 import okhttp3.OkHttpClient
 import java.util.concurrent.TimeUnit
 
-=======
+
 import com.huy.source.NotificationDialog
 import com.huy.source.ProcessDialog
->>>>>>> 1ce777d16b754576e8434a722caf3a6cf66200b3:FBook/app/src/main/java/com/cwd/fbook/base/BaseActivity.kt
+
 
 /**
  *  @Project: FBook

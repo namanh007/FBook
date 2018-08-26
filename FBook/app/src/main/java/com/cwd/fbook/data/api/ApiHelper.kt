@@ -7,6 +7,7 @@ import com.google.gson.JsonObject
 import okhttp3.MediaType
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
+import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -41,10 +42,21 @@ class ApiHelper {
     fun login(username: String, password: String, listener: RequestListener) {
 
         val parameter = buildParam {
-            push("username", username)
+            push("user_id", username)
             push("password", password)
         }
         mService.login(parameter).doRequest(listener)
+
+      /*  mService.login(username,password).enqueue(object : Callback<ResponseBody> {
+            override fun onFailure(call: Call<ResponseBody>?, t: Throwable?) {
+                val msg = t?.message
+            }
+
+            override fun onResponse(call: Call<ResponseBody>?, response: Response<ResponseBody>?) {
+                val data = response?.body() ?: return
+                //listener.onSuccess(data)
+            }
+        })*/
     }
 
 

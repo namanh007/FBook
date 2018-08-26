@@ -29,11 +29,13 @@
         <com.cwd.fbook.view.InputView
             android:id="@+id/login_inputView_userName"
             style="@style/FillTheWidth"
+            android:text="username1"
             app:inputLabel="@string/username" />
 
         <com.cwd.fbook.view.InputView
             android:id="@+id/login_inputView_password"
             style="@style/FillTheWidth"
+            android:text="password1"
             android:layout_marginTop="@dimen/Dist6"
             app:inputLabel="@string/password" />
     </LinearLayout>

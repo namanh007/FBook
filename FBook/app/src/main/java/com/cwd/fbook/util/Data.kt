@@ -50,6 +50,20 @@ fun String?.isPersonName(): Boolean {
     return this!!.matches("[a-zA-Z ]+".toRegex()) && this!!.length in 1..24
 }
 
+fun String?.isUserName(): Boolean {
+
+    if (this == null)
+        return false
+
+    if(!this.matches("[a-zA-Z0-9]+".toRegex()))
+        return false
+
+    if(this.length !in 1..12)
+        return false
+
+    return true
+}
+
 fun String?.isPassword(): Boolean {
     return this!!.length in 6..24
 }
