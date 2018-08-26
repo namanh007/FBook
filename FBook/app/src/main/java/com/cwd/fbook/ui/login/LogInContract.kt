@@ -6,17 +6,19 @@ import com.huy.source.MvpViewInt
 /**
  * Created by tykud on 17/06/2018.
  */
-interface LogInContract{
+interface LogInContract {
 
     interface View : MvpViewInt {
 
+        fun showUsername(stringRes: Int)
 
+        fun showPass(stringRes: Int)
     }
 
-    interface Presenter : MvpPresenterInt<View>{
 
-        fun login(username : String?, password : String?)
+    interface Presenter : MvpPresenterInt<View> {
 
-        fun checkLogin()
+        fun validateLoginField(username: String?, password: String?)
     }
+
 }

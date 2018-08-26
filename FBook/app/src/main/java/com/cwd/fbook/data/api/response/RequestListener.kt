@@ -1,6 +1,6 @@
 package com.cwd.fbook.data.api.response
 
-import com.cwd.fbook.data.api.model.ApiMsg
+import com.google.gson.JsonObject
 
 /**
  *  @Project: FBook
@@ -8,9 +8,7 @@ import com.cwd.fbook.data.api.model.ApiMsg
  *  @Description: ...
  *  All Right Reserved.
  */
-interface ApiResponse {
+interface RequestListener {
 
-    fun onSuccess(result: ApiMsg)
-
-    fun onFailed()
+    fun onSuccess(data: JsonObject)
 }

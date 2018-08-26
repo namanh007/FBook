@@ -1,6 +1,6 @@
 package com.cwd.fbook.util
 
-import com.cwd.fbook.data.api.model.UserApi
+import com.cwd.fbook.ui.response.UserRes
 import com.cwd.fbook.data.room.UserEntity
 
 /**
@@ -15,7 +15,7 @@ import com.cwd.fbook.data.room.UserEntity
  *  @Description: ...
  *  All Right Reserved.
  */
-fun UserApi.convert(): UserEntity {
+fun UserRes.convert(): UserEntity {
     return UserEntity(userId, firstName, lastName, photoDisplay)
 }
 

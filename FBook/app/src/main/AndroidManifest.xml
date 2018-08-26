@@ -22,16 +22,18 @@
         <activity android:name=".ui.loading.LoadingActivity">
 
         </activity>
-        <activity android:name=".ui.login.LogInActivity" />
-        <activity
-            android:name=".ui.register.RegisterActivity"
-            android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".ui.main.MainActivity">
+        <activity android:name=".ui.login.LogInActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.register.RegisterActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.main.MainActivity">
+
         </activity>
     </application>
 

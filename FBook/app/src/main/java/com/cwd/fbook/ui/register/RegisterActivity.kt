@@ -3,19 +3,8 @@ package com.cwd.fbook.ui.register
 import android.support.v7.widget.LinearSnapHelper
 import android.view.View
 import com.cwd.fbook.R
-import com.cwd.fbook.ui.model.Sex
+import com.cwd.fbook.data.define.Sex
 import com.huy.source.MvpActivity
-import com.cwd.fbook.util.checkedButton
-import com.cwd.fbook.util.initDotView
-import com.cwd.fbook.util.setLinearAdapter
-import com.cwd.fbook.util.setUpWithSlideView
-import kotlinx.android.synthetic.main.activity_register.*
-import kotlinx.android.synthetic.main.view_birth.*
-import kotlinx.android.synthetic.main.view_congratulation.*
-import kotlinx.android.synthetic.main.view_name.*
-import kotlinx.android.synthetic.main.view_password.*
-import kotlinx.android.synthetic.main.view_sex.*
-import kotlinx.android.synthetic.main.view_term.*
 
 /**
  *  @Project: FBook

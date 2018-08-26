@@ -5,8 +5,9 @@ package com.cwd.fbook.ui.login
  */
 public class SignInTag() {
     companion object {
-        const val LOGIN : String = "LOGIN"
+        const val LOGINSUCCESS : String = "SUCCESS"
         const val ERROR : String = "ERROR"
+
     }
 
 }

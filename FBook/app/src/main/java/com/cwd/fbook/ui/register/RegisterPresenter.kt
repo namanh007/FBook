@@ -2,7 +2,7 @@ package com.cwd.fbook.ui.register
 
 import com.cwd.fbook.R
 import com.cwd.fbook.ui.adapter.YearAdapter
-import com.cwd.fbook.ui.model.Sex
+import com.cwd.fbook.data.define.Sex
 import com.cwd.fbook.util.isPassword
 import com.cwd.fbook.util.isPersonName
 import com.huy.source.MvpPresenter

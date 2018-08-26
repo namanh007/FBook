@@ -10,9 +10,16 @@ import android.app.Application
  */
 class App : Application() {
 
+    private var trimLevel: Int = 0
+    private var user: User? = null
+
     companion object {
         @Volatile
         lateinit var instance: App
+
+        fun setCurrentUser(user: User?) {
+            instance.user = user
+        }
     }
 
     override fun onCreate() {
@@ -21,7 +28,8 @@ class App : Application() {
     }
 
     override fun onTrimMemory(level: Int) {
-        super.onTrimMemory(level)
+        super.onTrimMemory(trimLevel)
+        trimLevel++
     }
 
 }

@@ -1,18 +1,19 @@
 package com.cwd.fbook.data.api
+
+import com.cwd.fbook.SERVICE
 import com.cwd.fbook.data.Key
-import com.cwd.fbook.data.api.model.ApiMsg
-import com.cwd.fbook.data.api.response.ApiResponse
-import com.cwd.fbook.data.api.response.BodyResponse
+import com.cwd.fbook.data.api.response.RequestListener
+import com.google.gson.JsonObject
 import okhttp3.MediaType
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
-import okhttp3.ResponseBody
-import org.json.JSONException
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import java.io.File
-import javax.xml.transform.Result
+import java.util.*
 
 /**
  *  @Project: FBook
@@ -22,90 +23,74 @@ import javax.xml.transform.Result
  */
 class ApiHelper {
 
-    private val apiHeader = ApiHeader
-
-    fun login(username: String, password: String, listener: ApiResponse) {
-        val api = apiHeader.instance.create(ApiEndPoint.Login::class.java)
-        val call = api.request(username, password)
+    companion object {
+        val instance: ApiHelper by lazy(LazyThreadSafetyMode.SYNCHRONIZED) {
+            ApiHelper()
+        }
     }
+
+    private val mService: ApiService = Retrofit.Builder()
+            .baseUrl(SERVICE)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(ApiService::class.java)
+
+    var queue: Queue<Int> = LinkedList<Int>()
+
+
+    fun login(username: String, password: String, listener: RequestListener) {
+
+        val parameter = buildParam {
+            push("username", username)
+            push("password", password)
+        }
+        mService.login(parameter).doRequest(listener)
+    }
+
 
     fun register(username: String, password: String, firstName: String, lastName: String,
                  sex: Int, birth: Int, country: String, city: String,
-                 listener: ApiResponse) {
-        val api = apiHeader.instance.create(ApiEndPoint.Register::class.java)
-        val call = api.request(username, password, firstName, lastName, sex, birth, country, city)
+                 listener: RequestListener) {
 
+        val parameter = buildParam {
+            push("username", username)
+            push("password", password)
+            push("firstName", firstName)
+            push("lastName", lastName)
+            push("lastName", birth)
+            push("password", password)
+        }
+        mService.register(parameter).doRequest(listener)
     }
 
-    fun sendInvite(userId: String, inviteId: String, listener: ApiResponse) {
-        val api = apiHeader.instance.create(ApiEndPoint.SendInvite::class.java)
-        val call = api.request(userId, inviteId)
-    }
 
-    fun searchUser(searchKey: String, fromResult: Int, listener: ApiResponse) {
-        val api = apiHeader.instance.create(ApiEndPoint.SearchUser::class.java)
-        val call = api.request(searchKey, fromResult)
-    }
 
-    fun uploadUserPhoto(username: String, file: File, type: MediaType, listener: ApiResponse) {
-
-        val description = RequestBody.create(okhttp3.MultipartBody.FORM, username)
-        val requestBody = RequestBody.create(type, file)
-        val filePart = MultipartBody.Part.createFormData(Key.PHOTO_DISPLAY, file.name, requestBody)
-        val api = apiHeader.instance.create(ApiEndPoint.UploadUserPhoto::class.java)
-        val call = api.request(description, filePart)
-    }
-
-    fun updateUserPhoto(username: String, photoDisplay: String, listener: ApiResponse) {
-        val api = apiHeader.instance.create(ApiEndPoint.UpdateUserPhoto::class.java)
-        val call = api.request(username, photoDisplay)
-    }
-
-    fun getImageUrl(userPhotoPath: String?): String? {
-        if(userPhotoPath.isNullOrEmpty())
-            return null
-        return "http://${ApiHeader.HOST}/fbook/$userPhotoPath"
-    }
-
-    private fun addResponseCallBackListener(call: Call<ResponseBody>, listener: BodyResponse) {
-        call.enqueue(object : Callback<ResponseBody> {
-            override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
-                if(response.isSuccessful) {
-                    val body = response.body()!!.string().toString()
-                    if(!body.isNullOrEmpty())
-                        listener.onSuccess()
-                    else
-                        listener.onFailed()
-                } else
-                    listener.onFailed()
+    private fun Call<JsonObject>.doRequest(listener: RequestListener) {
+        this.enqueue(object : Callback<JsonObject> {
+            override fun onFailure(call: Call<JsonObject>?, t: Throwable?) {
             }
 
-            override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
-                listener.onFailed()
+            override fun onResponse(call: Call<JsonObject>?, response: Response<JsonObject>?) {
+                val data = response?.body() ?: return
+                listener.onSuccess(data)
             }
         })
     }
 
-    private fun addResultCallBackListener(call: Call<ApiMsg>, listener: ApiResponse) {
-
-        call.enqueue(object : Callback<ApiMsg> {
-            override fun onResponse(call: Call<ApiMsg>?, response: Response<ApiMsg>?) {
-                try {
-                    val result = response!!.body()!!.result
-                    val code = response.body()!!.code
-                    val message = response.body()!!.message
-                    listener.onSuccess(ApiMsg(result, code, message))
-                } catch(ex: JSONException) {
-                    ex.printStackTrace()
-                    listener.onFailed()
-                }
-            }
-
-            override fun onFailure(call: Call<ApiMsg>?, t: Throwable?) {
-                listener.onFailed()
-            }
-        })
+    private fun buildParam(void: JsonObject.() -> Unit?): JsonObject {
+        val body = JsonObject()
+        body.void()
+        return body
     }
 
+    private fun JsonObject.push(key: String, value: String?) {
+        if (value != null)
+            addProperty(key, value)
+    }
+
+    private fun JsonObject.push(key: String, value: Int?) {
+        if (value != null)
+            addProperty(key, value)
+    }
 
 }

@@ -10,6 +10,10 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Toast
 import com.cwd.fbook.util.hideKeyboard
+import javax.xml.datatype.DatatypeConstants.SECONDS
+import okhttp3.OkHttpClient
+import java.util.concurrent.TimeUnit
+
 
 /**
  *  @Project: FBook
@@ -114,5 +118,11 @@ abstract class BaseActivity : AppCompatActivity(), BaseView {
 
         @Suppress("UNCHECKED_CAST")
         return findViewById(resId)
+    }
+    fun timeOut(){
+        val okHttpClient = OkHttpClient.Builder()
+                .readTimeout(6000, TimeUnit.SECONDS)
+                .connectTimeout(6000, TimeUnit.SECONDS)
+                .build()
     }
 }

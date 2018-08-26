@@ -9,8 +9,8 @@ package com.cwd.fbook.data.pref
 class Account{
     var id : String = ""
     var firstName : String = ""
-    var lastName : String = ""
-    var photoDisplay : String = ""
+    var lastName : String? = null
+    var photoDisplay : String? = null
     var sex : String = ""
     var email : String = ""
 }

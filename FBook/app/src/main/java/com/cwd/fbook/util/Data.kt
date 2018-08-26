@@ -1,5 +1,6 @@
 package com.cwd.fbook.util
 
+import com.google.gson.*
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.*
@@ -53,10 +54,46 @@ fun String?.isPassword(): Boolean {
     return this!!.length in 6..24
 }
 
-fun HashMap<String, Any>.stringOf(key: String) : String{
+fun String?.sayHello() {
+    System.out.print("say Hello")
+}
+
+
+fun HashMap<String, Any>.stringOf(key: String): String {
     return get(key).toString()
 }
 
-fun HashMap<String, Any>.intOf(key: String) : Int{
+fun HashMap<String, Any>.intOf(key: String): Int {
     return get(key).toString().toInt()
+}
+
+fun <T> JsonObject?.parse(cls: Class<T>): T? {
+
+    this ?: return null
+    return try {
+        return Gson().fromJson(this.toString(), cls)
+    } catch (e: IllegalStateException) {
+        e.printStackTrace()
+        null
+    } catch (e: JsonSyntaxException) {
+        e.printStackTrace()
+        null
+    } catch (e: IllegalArgumentException) {
+        e.printStackTrace()
+        null
+    }
+}
+
+fun <T> JsonArray?.parse(cls: Class<T>): MutableList<T>? {
+
+    this ?: return null
+    val list = mutableListOf<T>()
+    for (obj: JsonElement in this) {
+        if (obj is JsonObject) {
+            val model = obj.parse(cls) ?: continue
+            list.add(model)
+        }
+    }
+    if (list.isEmpty()) return null
+    return null
 }

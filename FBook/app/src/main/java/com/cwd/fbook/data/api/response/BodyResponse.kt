@@ -9,6 +9,4 @@ package com.cwd.fbook.data.api.response
 interface BodyResponse {
 
     fun onSuccess()
-
-    fun onFailed()
 }

@@ -1,7 +1,7 @@
 package com.cwd.fbook.ui.register
 
 import com.cwd.fbook.ui.adapter.YearAdapter
-import com.cwd.fbook.ui.model.Sex
+import com.cwd.fbook.data.define.Sex
 import com.huy.source.MvpPresenterInt
 import com.huy.source.MvpViewInt
 import java.io.File

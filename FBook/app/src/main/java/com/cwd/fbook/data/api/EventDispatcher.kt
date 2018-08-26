@@ -17,10 +17,15 @@ class EventDispatcher private constructor() {
     private val sync = Any()
 
     companion object {
-        private var sInstance: EventDispatcher? = null
+
+        private lateinit var sInstance: EventDispatcher
+        //EventDispatcher sInstance
+
         @Synchronized
         fun getInstance(): EventDispatcher {
+
             var tmp = sInstance
+
             if (tmp == null) {
                 synchronized(EventDispatcher::class.java) {
                     tmp = sInstance
